@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: pada-moola-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false   # You will enter this manually in the Render dashboard
+      - key: NODE_ENV
+        value: production

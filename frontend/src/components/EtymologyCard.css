@@ -1,0 +1,186 @@
+.etymology-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.language-toggle-group {
+  display: flex;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 3px;
+  border-radius: 10px;
+  border: 1px solid var(--surface-border);
+}
+
+.toggle-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toggle-btn:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.toggle-btn.active {
+  background: var(--accent-gradient);
+  color: white;
+  box-shadow: 0 4px 10px -2px rgba(139, 92, 246, 0.5);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.language-badge {
+  background: rgba(139, 92, 246, 0.2);
+  color: #c4b5fd;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.card-words {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.word-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.word-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+}
+
+.word-value {
+  font-size: 1.25rem;
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+.native-script .word-value {
+  font-size: 1.75rem;
+  font-family: 'Noto Sans Devanagari', 'Noto Sans Kannada', sans-serif;
+}
+
+.divider {
+  height: 1px;
+  background: var(--surface-border);
+  width: 100%;
+}
+
+.etymology-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.etymology-content h4 {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.dhatu-section {
+  padding: 1.25rem;
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  margin-bottom: 0.5rem;
+}
+
+.dhatu-label {
+  color: var(--accent-color) !important;
+  font-weight: 700;
+}
+
+.dhatu-display {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.dhatu-text {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.dhatu-meaning {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.history-section {
+  margin-top: 1rem;
+}
+
+.description {
+  color: #e2e8f0;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.derivatives-section {
+  margin-top: 1.5rem;
+}
+
+.derivatives-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.derivative-tag {
+  background: var(--surface-border);
+  color: var(--text-primary);
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.derivative-tag:hover {
+  background: rgba(139, 92, 246, 0.15);
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+}
