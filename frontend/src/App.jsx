@@ -4,7 +4,7 @@ import SearchBar from './components/SearchBar';
 import EtymologyCard from './components/EtymologyCard';
 import OriginChart from './components/OriginChart';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
 
 function App() {
   const [loading, setLoading] = useState(false);
