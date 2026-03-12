@@ -1,0 +1,12 @@
+{
+  "name": "etymology-app",
+  "version": "1.0.0",
+  "description": "An app to explore the etymology of English, Sanskrit, and Kannada words. Powered by Gemini AI.",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "cd frontend && npm install && cd ../backend && npm install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
