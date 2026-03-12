@@ -24,35 +24,24 @@ npm run dev
 
 ---
 
-## Deployment Guide (Free Tier)
+## Deployment Guide (Netlify Free Tier)
 
-### Step 1 — Push to GitHub
-1. Create a new repo on [github.com](https://github.com)
-2. Push this folder:
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin https://github.com/YOUR_USERNAME/pada-moola
-git push -u origin main
-```
+This app is configured to be deployed as a unified project on **Netlify**!
+Because we use a Netlify Serverless Function for the backend, you do ***not*** need a separate Render deployment.
 
-### Step 2 — Deploy Backend to Render
-1. Go to [render.com](https://render.com) → New → Web Service
-2. Connect your GitHub repo → Select the **`backend/`** folder
-3. Settings:
-   - **Build Command:** `npm install`
-   - **Start Command:** `node server.js`
-4. Add Environment Variable:
-   - `GEMINI_API_KEY` = your key from [aistudio.google.com](https://aistudio.google.com)
-5. Deploy → Copy the live URL (e.g. `https://pada-moola-backend.onrender.com`)
+1. Create a new repo on [github.com](https://github.com) and push your code.
+2. Connect your GitHub repository to Netlify.
+3. Netlify will automatically detect the settings in `netlify.toml` and build the app.
+4. Your Express backend will run as a Netlify Function!
 
-### Step 3 — Deploy Frontend to Vercel
-1. Go to [vercel.com](https://vercel.com) → New Project
-2. Import your GitHub repo → Set **Root Directory** to `frontend`
-3. Add Environment Variable:
-   - `VITE_API_URL` = `https://pada-moola-backend.onrender.com/api`
-4. Deploy → Your app is live! 🎉
+### 🔑 Setting up the API Key in Netlify
+Because this app relies on the Google Gemini AI, you must configure your API Key within Netlify.
+1. In your Netlify dashboard, go to your Site settings.
+2. Navigate to **Site configuration > Environment variables**.
+3. Add a new variable:
+   - Key: `GEMINI_API_KEY`
+   - Value: `(Your actual Gemini API key)`
+4. Save and trigger a new deployment.
 
 ---
 

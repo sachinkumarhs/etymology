@@ -44,10 +44,13 @@ router.get('/transliterate', async (req, res) => {
         }
 
         // Aksharamukha API (Autodetects source, transliterates to target)
-        // Note: Aksharamukha returns plain text response
-        const response = await axios.get(`https://aksharamukha.appspot.com/api/public?target=${target}&text=${encodeURIComponent(text)}`);
+        // Request arraybuffer so axios does not mangle unicode bytes before we get them
+        const response = await axios.get(`https://aksharamukha.appspot.com/api/public?target=${target}&text=${encodeURIComponent(text)}`, {
+            responseType: 'arraybuffer'
+        });
         
-        const result = response.data;
+        let result = Buffer.from(response.data).toString('utf-8');
+
         cache.set(cacheKey, result);
         
         res.json({ result });
